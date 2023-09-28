@@ -7,11 +7,12 @@ export const clientOptions: ClientOptions = {
     allowedMentions: { parse: ["users"], repliedUser: true },
     intents: [
         IntentsBitField.Flags.Guilds,
-        IntentsBitField.Flags.MessageContent,
+        IntentsBitField.Flags.GuildModeration,
+        // IntentsBitField.Flags.MessageContent,
         IntentsBitField.Flags.GuildMessages,
-        IntentsBitField.Flags.GuildEmojisAndStickers,
-        IntentsBitField.Flags.GuildVoiceStates,
-        IntentsBitField.Flags.GuildBans
+        // IntentsBitField.Flags.GuildEmojisAndStickers,
+        IntentsBitField.Flags.GuildVoiceStates
+        // // IntentsBitField.Flags.GuildBans
     ],
     makeCache: Options.cacheWithLimits({
         MessageManager: {
